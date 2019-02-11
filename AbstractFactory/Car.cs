@@ -27,4 +27,23 @@ namespace AbstractFactory
         }
     }
 
+
+    class ToyotaAssemblyLine
+    {
+
+        private ToyotaFactory _factory;
+
+        public ToyotaAssemblyLine(ToyotaFactory factory)
+        {
+            _factory = factory;
+        }
+
+        public Car AssembleCar()
+        {
+            var body = _factory.MakeBody();
+            var engine = _factory.MakeEngine(); 
+
+            return new Car(body, engine);
+        }
+    }
 }
