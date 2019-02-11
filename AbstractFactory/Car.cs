@@ -19,6 +19,10 @@ namespace AbstractFactory
             Engine = engine;
         }
 
+        public void StartEngine()
+        {
+            Engine.Start();
+        }
 
         public override string ToString()
         {

@@ -14,13 +14,13 @@ namespace AbstractFactory
 
             var EuropeYaris = EuropeFactory.AssembleCar();
             Console.WriteLine(EuropeYaris);
-            EuropeYaris.Engine.Start();
+            EuropeYaris.StartEngine();
 
             var JapanFactory = new ToyotaAssemblyLine(new AvensisFactory());
 
             var JapanAvensis = JapanFactory.AssembleCar();
             Console.WriteLine(JapanAvensis);
-            JapanAvensis.Engine.Start();
+            JapanAvensis.StartEngine();
 
             Console.Read();
         }
