@@ -16,12 +16,47 @@ namespace AbstractFactory
 
     abstract class Body
     {
-        public int Weight { get; set; }
+        public int Weight { get; protected set; }
     }
 
+    class YarisBody : Body
+    {
+        public YarisBody()
+        {
+            Weight = 400;
+        }
+    }
+
+    class AvensisBody : Body
+    {
+        public AvensisBody()
+        {
+            Weight = 500;
+        }
+    }
+    
 
     abstract class Engine
     {
         public abstract void Start();
     }
+
+    class YarisEngine : Engine
+    {
+        public override void Start()
+        {
+            Console.WriteLine("Vrooom!");
+        }
+    }
+
+
+   class AvensisEngine : Engine
+    {
+        public override void Start()
+        {
+            Console.WriteLine("Vrooeeoeoemm!!");
+        }
+    }
+
+
 }
