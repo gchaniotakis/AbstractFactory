@@ -22,7 +22,7 @@ namespace AbstractFactory
 
         public override string ToString()
         {
-            return $"{Body} with a weight of {Body.Weight}kg and a {Engine}";
+            return $"An {Body} with a weight of {Body.Weight}kg and an {Engine}";
 
         }
     }
